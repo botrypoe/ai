@@ -1,0 +1,654 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>童遊AI星球：機器人小冒險家營 | 北部專場 | 國小國中AI啟蒙課程</title>
+<meta name="description" content="北部國中小學生AI機器人啟蒙營隊！2天趣味課程學習程式邏輯、機器人控制基礎，獲得AI機器人工程坊證書。適合程式設計初學者，激發創造力與問題解決能力！">
+
+    <meta name="copyright" content="2025 AI機器人探索營隊">
+<meta name="generator" content="博才網站SEO">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #8B8D00 0%, #BCBD00 50%, #D4D600 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #8B8D00 0%, #BCBD00 100%);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            position: relative;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            color: #BCBD00;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #BCBD00;
+            padding-bottom: 5px;
+        }
+        
+        h4 {
+            font-size: 1.2rem;
+            color: #BCBD00;
+            margin: 15px 0 10px;
+        }
+        
+        .region-tag {
+            display: inline-block;
+            background-color: #ff5722;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            margin: 15px 0;
+            font-weight: bold;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hero-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 20px;
+            background-color: #f9fbe7;
+        }
+        
+        .hero-image-container {
+            flex: 1;
+            min-width: 300px;
+            margin-right: 20px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hero-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+        
+        .hero-content {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .organizers {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f9fbe7;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+        
+        .program-section {
+            margin: 30px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .program-day {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .program-day:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .day-title {
+            font-weight: bold;
+            color: #BCBD00;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .day-title i {
+            margin-right: 10px;
+            color: #ff5722;
+        }
+        
+        .day-time {
+            background-color: #BCBD00;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .activity-list {
+            list-style-type: none;
+            margin: 15px 0;
+        }
+        
+        .activity-list li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .activity-list li:before {
+            content: "🔹";
+            position: absolute;
+            left: 0;
+            color: #BCBD00;
+        }
+        
+        .certificate {
+            font-style: italic;
+            color: #BCBD00;
+            background-color: #f9fbe7;
+            padding: 8px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        
+        .info-section {
+            margin: 30px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .info-card {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #BCBD00;
+        }
+        
+        .pricing-plans {
+            margin: 30px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .pricing-card {
+            background-color: #f9fbe7;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .pricing-title {
+            font-weight: bold;
+            color: #BCBD00;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .pricing-price {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #e53935;
+            margin: 10px 0;
+        }
+        
+        .pricing-deadline {
+            font-style: italic;
+            color: #777;
+            background-color: #fff8e1;
+            padding: 8px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        
+        .contact-info {
+            background-color: #e8f5e9;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .bank-info {
+            background-color: #fff3e0;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .qr-section {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f0f7ff;
+            border-radius: 10px;
+        }
+        
+        .qr-placeholder {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(45deg, #8B8D00, #BCBD00);
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            color: white;
+            font-size: 1.2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .notes-section {
+            background-color: #fff8e1;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .notes-list {
+            list-style-type: none;
+            margin: 15px 0;
+        }
+        
+        .notes-list li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .notes-list li:before {
+            content: "📌";
+            position: absolute;
+            left: 0;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #8B8D00;
+            color: white;
+            margin-top: 30px;
+        }
+        
+        .highlight {
+            color: #e53935;
+            font-weight: bold;
+        }
+        
+        .image-gallery {
+            margin: 30px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .hero-section {
+                flex-direction: column;
+            }
+            
+            .hero-image-container {
+                margin-right: 0;
+                margin-bottom: 20px;
+                width: 100%;
+            }
+            
+            .program-section, .pricing-plans, .info-section, .image-gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-item {
+                max-width: 100%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                border-radius: 10px;
+            }
+            
+            h1 {
+                font-size: 1.6rem;
+            }
+            
+            .content {
+                padding: 15px;
+            }
+        }
+        
+        .robot-illustration {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .robot {
+            font-size: 4rem;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .planet {
+            font-size: 3rem;
+            margin: 0 10px;
+            animation: spin 10s linear infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .illustration-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        
+        .nav-menu {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 10px;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #0d47a1;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        
+        .nav-button:hover {
+            background: #1565c0;
+        }
+
+/* QR Code 區域樣式 */
+.qr-section {
+    text-align: center;
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #f0f7ff;
+    border-radius: 10px;
+}
+
+.qr-responsive-container {
+    width: min(200px, 40vw);
+    height: min(200px, 40vw);
+    margin: 0 auto 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qr-responsive {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.qr-note {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* 響應式調整 */
+@media (max-width: 768px) {
+    .qr-responsive-container {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .qr-responsive-container {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .qr-section {
+        padding: 15px;
+        margin: 20px 0;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>2025 AI Planet Adventures: Little Robot Explorers Camp</h1>
+            <h2>2025 童遊 AI 星球：機器人小冒險家營</h2>
+            
+            <div class="region-tag">桃竹苗・北北基地區限定</div>
+        </header>
+        
+        <div class="illustration-container">
+            <div class="planet">🪐</div>
+            <div class="robot">🤖</div>
+            <div class="planet">🌌</div>
+        </div>
+        
+        <!-- 主要图片区域 - 已优化为响应式 -->
+        <div class="hero-section">
+            <div class="hero-image-container">
+                <img src="images/p-2.png" alt="機器人小冒險家營隊" class="hero-image">
+            </div>
+            <div class="hero-content">
+                <section class="organizers">
+                    <p><strong>瑀德國際資優教育主辦</strong></p>
+                    <p>社團法人中華民國創新發明暨設計教育輔導協會協辦</p>
+                    <p>國立勤益科技大學 機械工程系微控制實驗室執行</p>
+                </section>
+                
+                <section class="qr-section">
+                    <h3>採線上報名：</h3>
+                    <p><strong>QR code - <span style="color:#800080">手機直連</span></strong></p>
+                    <div class="qr-responsive-container">
+                  <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScaAnEHVqOQckAY7j0eVWhgugeluqA1sNnSBWdoPXHhJxVCWA/viewform?usp=header">
+                  <img src="images/camp4_qrcode.png" alt="線上報名QR Code" class="qr-responsive"></a>
+                    </div>
+                    <p class="qr-note">使用手機相機掃描QR Code即可報名</p>
+                </section>
+            </div>
+        </div>
+        
+        
+        <div class="content">
+            <section>
+                <h3>活動內容與時間</h3>
+                
+                <div class="program-section">
+                    <div class="program-day">
+                        <div class="day-title"><i class="fas fa-brain"></i> Day 1｜AI腦力發電站：快樂學程式</div>
+                        <div class="day-time">🕒 2月7日（六）09:30－17:30</div>
+                        <ul class="activity-list">
+                            <li>挑戰任務，探索AI世界</li>
+                            <li>學習基礎程式設計與邏輯思維</li>
+                            <li>完成課程，獲得《AI程式設計坊證書》</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="program-day">
+                        <div class="day-title"><i class="fas fa-robot"></i> Day 2｜未來機器人指揮官：動作設計挑戰</div>
+                        <div class="day-time">🕒 2月8日（日）09:30－17:30</div>
+                        <ul class="activity-list">
+                            <li>操控感測器與指令控制機器人</li>
+                            <li>解決任務，培養問題解決能力</li>
+                            <li>完成挑戰，獲得《AI機器人工程坊證書》</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+
+            
+            <section class="notes-section">
+                <h3>注意事項</h3>
+                <ul class="notes-list">
+                    <li>報名時請留下您的聯絡方式（手機、E-mail 或 Line ID），方便我們隨時聯繫您喔！</li>
+                    <li>營隊有任何最新消息或變動，我們會即時透過簡訊與 E-mail 通知您，讓您不錯過任何資訊！</li>
+                </ul>
+            </section>
+            
+            <section class="info-section">
+                <div class="info-card">
+                    <h3><i class="fas fa-calendar-alt"></i> 活動日期</h3>
+                    <p>115 年 2 月 7 日(六)～115 年 2 月 8 日(日)</p>
+                </div>
+                
+                <div class="info-card">
+                    <h3><i class="fas fa-users"></i> 招生對象</h3>
+                    <p>桃竹苗、北北基地區<br>國小三年級～國中三年級學生</p>
+                </div>
+                
+                <div class="info-card">
+                    <h3><i class="fas fa-map-marker-alt"></i> 活動地點</h3>
+                    <p>國立勤益科技大學<br>機械工程系(暫定, 會另行通知)</p>
+                </div>
+            </section>
+            
+            <section class="pricing-plans">
+                <div class="pricing-card">
+                    <div class="pricing-title">早鳥優惠</div>
+                    <div class="pricing-price">$4,500<span class="highlight">/人</span></div>
+                    <div class="pricing-deadline">報名期限：即日起～114/12/15</div>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-title">一般報名</div>
+                    <div class="pricing-price">$5,500<span class="highlight">/人</span></div>
+                    <div class="pricing-deadline">報名期限：114/12/16～115/1/15</div>
+                </div>
+            </section>
+            
+            <section class="contact-info">
+                <h3><i class="fas fa-address-book"></i> 聯絡資訊</h3>
+                <p>聯絡人：陳老師</p>
+                <p>電話：0937-811-661</p>
+                <p>Email：chencamp117@gmail.com</p>
+            </section>
+            
+            <section class="bank-info">
+                <h3><i class="fas fa-university"></i> 匯款資訊</h3>
+                <p>匯款帳號：8212 00000 54440</p>
+                <p>戶名：中華民國創新發明暨設計教育輔導協會</p>
+                <p>台北富邦 台中分行 總分支代碼 012-7071</p>
+            </section>
+        </div>
+        
+        <footer>
+            <p>© 2025 童遊AI星球：機器人小冒險家營 - 北部場 版權所有</p>
+        </footer>
+    </div>
+
+    <!-- 導航選單 -->
+    <div class="nav-menu">
+        <h3>其他營隊資訊</h3>
+        <div class="nav-buttons">
+            <a href="index.html" class="nav-button">首頁</a>
+            <a href="camp1.html" class="nav-button">中部高中職</a>
+            <a href="camp2.html" class="nav-button">中部國中小</a>
+            <a href="camp3.html" class="nav-button">北部高中職</a>
+            <a href="camp4.html" class="nav-button">北部國中小</a>
+        </div>
+    </div>
+</body>
+</html>
