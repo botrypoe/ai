@@ -1,0 +1,497 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI機器人工程師冬令營 | 高中職專屬 | 中彰投雲嘉南地區 | 程式設計證書</title>
+<meta name="description" content="專為高中職學生設計的AI機器人工程師課程！4天完整學習Python程式設計、機器人控制、感測器應用，獲得專業研習證書。培養AI時代必備技能，為大學科系選擇做好準備！">
+
+    <meta name="copyright" content="2025 AI機器人探索營隊">
+<meta name="generator" content="博才網站SEO">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a237e 0%, #283593 50%, #3949ab 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #0d47a1 0%, #1976d2 100%);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            position: relative;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #ffeb3b;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            color: #0d47a1;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #0d47a1;
+            padding-bottom: 5px;
+        }
+        
+        h4 {
+            font-size: 1.2rem;
+            color: #0d47a1;
+            margin: 15px 0 10px;
+        }
+        
+        .region-tag {
+            display: inline-block;
+            background-color: #ff9800;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            margin: 15px 0;
+            font-weight: bold;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* 左圖右文佈局樣式 */
+        .hero-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+        }
+        
+        .hero-image-container {
+            flex: 1;
+            min-width: 300px;
+            margin-right: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hero-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .hero-image:hover {
+            transform: scale(1.02);
+        }
+        
+        .hero-content {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .organizers {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #e3f2fd;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+        
+        .pricing-plans {
+            margin: 30px 0;
+        }
+        
+        .plans-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .plan {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .plan:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .plan-title {
+            font-weight: bold;
+            color: #0d47a1;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .plan-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #e53935;
+            margin: 10px 0;
+        }
+        
+        .plan-details {
+            margin: 10px 0;
+            color: #555;
+        }
+        
+        .plan-deadline {
+            font-style: italic;
+            color: #777;
+            background-color: #fff8e1;
+            padding: 8px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        
+        .info-section {
+            margin: 30px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .info-card {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #0d47a1;
+        }
+        
+        .contact-info {
+            background-color: #e8f5e9;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .bank-info {
+            background-color: #fff3e0;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .qr-section {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f0f7ff;
+            border-radius: 10px;
+        }
+        
+        .qr-placeholder {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(45deg, #0d47a1, #1976d2);
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            color: white;
+            font-size: 1.2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0d47a1;
+            color: white;
+            margin-top: 30px;
+        }
+        
+        .highlight {
+            color: #e53935;
+            font-weight: bold;
+        }
+        
+        /* 響應式設計 */
+        @media (max-width: 768px) {
+            .hero-section {
+                flex-direction: column;
+            }
+            
+            .hero-image-container {
+                margin-right: 0;
+                margin-bottom: 20px;
+                width: 100%;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+            
+            .plans-container, .info-section {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                border-radius: 10px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .content {
+                padding: 15px;
+            }
+        }
+        
+        /* 導航選單樣式 */
+        .nav-menu {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 10px;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+        
+        .nav-button:hover {
+            transform: translateY(-2px);
+        }
+
+/* QR Code 區域樣式 */
+.qr-section {
+    text-align: center;
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #f0f7ff;
+    border-radius: 10px;
+}
+
+.qr-responsive-container {
+    width: min(200px, 40vw);
+    height: min(200px, 40vw);
+    margin: 0 auto 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qr-responsive {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.qr-note {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* 響應式調整 */
+@media (max-width: 768px) {
+    .qr-responsive-container {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .qr-responsive-container {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .qr-section {
+        padding: 15px;
+        margin: 20px 0;
+    }
+}
+
+</style>
+
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>2025 智造未來：</h1>
+            <h2>AI機器人工程師冬令營</h2>
+            
+            <h3>2025 Invent the Future:</h3>
+            <h4>AI Robotics Engineer Camp</h4>
+            
+            <div class="region-tag">中彰投・雲嘉南地區限定</div>
+        </header>
+        
+        <!-- 左圖右文佈局 -->
+        <div class="hero-section">
+            <div class="hero-image-container">
+                <img src="images/m.png" alt="2025 AI機器人工程師冬令營海報" class="hero-image">
+            </div>
+            <div class="hero-content">
+                <section class="organizers">
+                    <p><strong>瑀德國際資優教育主辦</strong></p>
+                    <p>中華民國創新發明暨設計教育輔導協會協辦</p>
+                    <p>國立勤益科技大學 機械工程系微控制實驗室執行</p>
+                </section>
+                
+                <section class="qr-section">
+                    <h3>採線上報名：</h3>
+                    <p><strong>QR code - <span style="color:#800080">手機直連</span></strong></p>
+                    <div class="qr-responsive-container">
+                  <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeuVIZykYTfub2BSV52AJ-30-8DWMJgzRuwWXWCLEmJcL6OlQ/viewform">
+                  <img src="images/camp1_qrcode.png" alt="線上報名QR Code" class="qr-responsive"></a>
+                    </div>
+                    <p class="qr-note">使用手機相機掃描QR Code即可報名</p>
+                </section>
+            </div>
+        </div>
+        
+        <div class="content">
+            <section class="pricing-plans">
+                <h3>報名方案 (費用均含午餐與教材)</h3>
+                
+                <div class="plans-container">
+                    <div class="plan">
+                        <div class="plan-title">A｜早鳥雙課程方案｜<span class="highlight">$5,000/人</span></div>
+                        <div class="plan-details">課程：AI程式設計入門、機器人動作設計 (可獲得兩張研習證書)</div>
+                        <div class="plan-deadline">報名期限：即日起～114/12/15</div>
+                    </div>
+                    
+                    <div class="plan">
+                        <div class="plan-title">B｜早鳥全課程方案｜<span class="highlight">$9,000/人</span></div>
+                        <div class="plan-details">課程：四門課程全選 (可獲得四張研習證書)</div>
+                        <div class="plan-deadline">報名期限：即日起～114/12/15</div>
+                    </div>
+                    
+                    <div class="plan">
+                        <div class="plan-title">C｜一般雙課程方案｜<span class="highlight">$7,000/人</span></div>
+                        <div class="plan-details">課程：AI程式設計入門、機器人動作設計 (可獲得兩張研習證書)</div>
+                        <div class="plan-deadline">報名期限：114/12/16～115/1/15</div>
+                    </div>
+                    
+                    <div class="plan">
+                        <div class="plan-title">D｜一般全課程方案｜<span class="highlight">$13,000/人</span></div>
+                        <div class="plan-details">課程：四門課程全選 (可獲得四張研習證書)</div>
+                        <div class="plan-deadline">報名期限：114/12/16～115/1/15</div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="info-section">
+                <div class="info-card">
+                    <h3><i class="fas fa-calendar-alt"></i> 活動日期</h3>
+                    <p>115年1月27日(二)～115年1月30日(四)</p>
+                </div>
+                
+                <div class="info-card">
+                    <h3><i class="fas fa-users"></i> 招生對象</h3>
+                    <p>中彰投、雲嘉南地區<br>高中、高職學生</p>
+                </div>
+                
+                <div class="info-card">
+                    <h3><i class="fas fa-map-marker-alt"></i> 活動地點</h3>
+                    <p>國立勤益科技大學<br>機械系館4F 微控制實驗室</p>
+                </div>
+            </section>
+            
+            <section class="contact-info">
+                <h3><i class="fas fa-address-book"></i> 聯絡資訊</h3>
+                <p>聯絡人：陳老師</p>
+                <p>電話：0937-811-661</p>
+                <p>Email：chencamp117@gmail.com</p>
+            </section>
+            
+            <section class="bank-info">
+                <h3><i class="fas fa-university"></i> 匯款資訊</h3>
+                <p>匯款帳號：8212 00000 54440</p>
+                <p>戶名：中華民國創新發明暨設計教育輔導協會</p>
+                <p>台北富邦 台中分行 總分支代碼 012-7071</p>
+            </section>
+        </div>
+        
+        <footer>
+            <p>© 2025 智造未來：AI機器人工程師冬令營 版權所有</p>
+        </footer>
+    </div>
+
+    <!-- 導航選單 -->
+    <div class="nav-menu">
+        <h3>其他營隊資訊</h3>
+        <div class="nav-buttons">
+            <a href="index.html" class="nav-button" style="background: #0d47a1;">首頁</a>
+            <a href="camp1.html" class="nav-button" style="background: #1976d2;">中部高中職</a>
+            <a href="camp2.html" class="nav-button" style="background: #005EBD;">中部國中小</a>
+            <a href="camp3.html" class="nav-button" style="background: #388e3c;">北部高中職</a>
+            <a href="camp4.html" class="nav-button" style="background: #BCBD00;">北部國中小</a>
+        </div>
+    </div>
+
+</body>
+</html>
