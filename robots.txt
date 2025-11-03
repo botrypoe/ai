@@ -1,0 +1,14 @@
+﻿User-agent: *
+Allow: /
+
+Sitemap: https://av.yc123.com.tw/sitemap.xml
+
+
+
+
+
+
+
+
+
+
