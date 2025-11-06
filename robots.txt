@@ -1,7 +1,7 @@
 ﻿User-agent: *
 Allow: /
 
-Sitemap: https://av.yc123.com.tw/sitemap.xml
+Sitemap: https://ai.yc123.com.tw/sitemap.xml
 
 
 
