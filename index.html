@@ -603,48 +603,51 @@
         }
         
         /* 修復CTA區域樣式 */
-        .cta-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 40px;
-            max-width: 680px;
-            margin: 0 auto;
-        }
+/* 修復CTA區域樣式 */
+.cta-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 680px;
+    margin: 0 auto;
+}
 
-        .cta-buttons-section {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
+.cta-buttons-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%; /* 新增這行 */
+}
 
-        .button-row {
-            display: flex;
-            justify-content: space-between;
-            gap: 15px;
-        }
+.button-row {
+    display: flex;
+    justify-content: space-between; /* 大螢幕時保持分散對齊 */
+    gap: 15px;
+    width: 100%; /* 新增這行 */
+}
 
-        .cta-button {
-            display: inline-block;
-            padding: 12px 20px;
-            background: #ffeb3b;
-            color: #0d47a1;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-            font-size: 1rem;
-            transition: background 0.3s, transform 0.3s;
-            flex: 1;
-            text-align: center;
-            min-width: 0;
-            white-space: nowrap;
-        }
+.cta-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #ffeb3b;
+    color: #0d47a1;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.3s;
+    flex: 1;
+    text-align: center;
+    min-width: 0;
+    white-space: nowrap;
+}
 
-        .cta-button:hover {
-            background: #ffd600;
-            transform: scale(1.05);
-        }
+.cta-button:hover {
+    background: #ffd600;
+    transform: scale(1.05);
+}
         
         .nav-menu {
             display: flex;
@@ -774,24 +777,34 @@
             }
             
             /* CTA區域響應式調整 */
-            .cta-content {
-                flex-direction: column;
-                gap: 30px;
-            }
-            
-            .button-row {
-                flex-direction: column;
-                gap: 12px;
-            }
-            
-            .cta-button {
-                width: 100%;
-                max-width: 250px;
-                margin: 0 auto;
-                padding: 10px 18px;
-                font-size: 0.95rem;
-            }
-        }
+ @media (max-width: 768px) {
+    .cta-content {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center; /* 新增：讓內容置中 */
+    }
+    
+    .cta-buttons-section {
+        align-items: center; /* 新增：讓按鈕區域置中 */
+        width: 100%;
+    }
+    
+    .button-row {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        max-width: 280px; /* 限制最大寬度，讓按鈕不會太寬 */
+        justify-content: center; /* 改為置中對齊 */
+    }
+    
+    .cta-button {
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
+        padding: 10px 18px;
+        font-size: 0.95rem;
+    }
+}
         
         @media (max-width: 600px) {
             .dual-images {
