@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
@@ -279,330 +280,329 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <style>
-     * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif;
-        }
-        
-        body {
-            background: linear-gradient(135deg, #1a237e 0%, #283593 50%, #3949ab 100%);
-            color: #333;
-            line-height: 1.6;
-            padding: 0;
-            min-height: 100vh;
-            overflow-x: hidden;
-            width: 100%;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background-color: white;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            width: 100%;
-            overflow: hidden;
-        }
-        
-        header {
-            background: linear-gradient(135deg, #0d47a1 0%, #1976d2 100%);
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .header-content {
-            position: relative;
-            z-index: 2;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        
-        h2 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: #ffeb3b;
-        }
-        
-        h3 {
-            font-size: 1.8rem;
-            color: #0d47a1;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        
-        h4 {
-            font-size: 1.4rem;
-            color: #0d47a1;
-            margin: 25px 0 15px;
-        }
-        
-        .subtitle {
-            font-size: 1.3rem;
-            max-width: 800px;
-            margin: 0 auto 30px;
-            line-height: 1.8;
-        }
-        
-        /* 雙圖佈局樣式 */
-        .dual-images {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 30px;
-            margin: 0 auto 30px;
-            flex-wrap: wrap;
-            width: 100%;
-            padding: 0 20px;
-            box-sizing: border-box;
-        }
-        
-        .image-container {
-            text-align: center;
-            flex: 0 1 auto;
-            min-width: 0;
-            max-width: 300px;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .camp-poster {
-            width: 100%;
-            max-width: 250px;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease;
-            animation: float 3s ease-in-out infinite;
-            order: 2; /* 預設圖片在下方 */
-        }
-        
-        .camp-poster:hover {
-            transform: scale(1.05);
-        }
-        
-        .image-caption {
-            margin-top: 10px;
-            color: white;
-            font-size: 1rem;
-            font-weight: bold;
-            order: 1; /* 預設標題在上方 */
-        }
-        
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-        
-        .intro-section {
-            padding: 60px 40px;
-            text-align: center;
-            background-color: #f8f9fa;
-        }
-        
-        .intro-content {
-            max-width: 900px;
-            margin: 0 auto;
-            font-size: 1.2rem;
-            line-height: 1.8;
-        }
-        
-        .highlight {
-            color: #0d47a1;
-            font-weight: bold;
-            font-size: 1.3rem;
-        }
-        
-        .camp-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-            gap: 30px;
-            padding: 40px;
-        }
-        
-        .camp-card {
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .camp-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-        }
-        
-        .camp-header {
-            padding: 25px;
-            color: white;
-            text-align: center;
-        }
-        
-        .camp-content {
-            padding: 25px;
-            background: white;
-        }
-        
-        .camp-icon {
-            font-size: 3rem;
-            margin-bottom: 15px;
-        }
-        
-        .camp-title {
-            font-size: 1.6rem;
-            margin-bottom: 10px;
-        }
-        
-        .camp-description {
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-        
-        /* 修改活動資訊樣式 - 確保大螢幕下橫列顯示 */
-        .camp-details {
-            margin: 15px 0;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-        
-        .camp-details p {
-            margin-bottom: 0;
-            display: flex;
-            align-items: flex-start;
-            min-height: 24px;
-        }
-        
-        .camp-details i {
-            margin-right: 10px;
-            color: #0d47a1;
-            width: 20px;
-            flex-shrink: 0;
-        }
-        
-        .camp-details strong {
-            min-width: 80px;
-            display: inline-block;
-            flex-shrink: 0;
-        }
-        
-        /* 確保大螢幕下文字不會換行 */
-        @media (min-width: 769px) {
-            .camp-details p {
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-            
-            .camp-details strong {
-                min-width: 85px;
-            }
-        }
-        
-        .camp-button {
-            display: inline-block;
-            padding: 12px 30px;
-            background: #0d47a1;
-            color: white;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-            transition: background 0.3s;
-            margin-top: 15px;
-        }
-        
-        .camp-button:hover {
-            background: #1565c0;
-        }
-        
-        .benefits-section {
-            padding: 60px 40px;
-            background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
-        }
-        
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .benefit-card {
-            background: white;
-            padding: 30px 20px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s;
-        }
-        
-        .benefit-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .benefit-icon {
-            font-size: 2.5rem;
-            color: #0d47a1;
-            margin-bottom: 20px;
-        }
-        
-        .benefit-title {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            color: #0d47a1;
-        }
-        
-        .testimonials-section {
-            padding: 60px 40px;
-            background-color: white;
-            text-align: center;
-        }
-        
-        .testimonial {
-            max-width: 800px;
-            margin: 0 auto 40px;
-            padding: 30px;
-            background: #f8f9fa;
-            border-radius: 10px;
-            border-left: 5px solid #0d47a1;
-        }
-        
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 20px;
-            line-height: 1.7;
-        }
-        
-        .testimonial-author {
-            font-weight: bold;
-            color: #0d47a1;
-        }
-        
-        .cta-section {
-            padding: 60px 40px;
-            background: linear-gradient(135deg, #0d47a1 0%, #1976d2 100%);
-            color: white;
-            text-align: center;
-        }
-        
-        .cta-title {
-            color: white;
-            margin-bottom: 20px;
-        }
-        
-        /* 修復CTA區域樣式 */
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a237e 0%, #283593 50%, #3949ab 100%);
+    color: #333;
+    line-height: 1.6;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, #0d47a1 0%, #1976d2 100%);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #ffeb3b;
+}
+
+h3 {
+    font-size: 1.8rem;
+    color: #0d47a1;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h4 {
+    font-size: 1.4rem;
+    color: #0d47a1;
+    margin: 25px 0 15px;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.8;
+}
+
+/* 雙圖佈局樣式 */
+.dual-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 0 auto 30px;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.image-container {
+    text-align: center;
+    flex: 0 1 auto;
+    min-width: 0;
+    max-width: 300px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.camp-poster {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    animation: float 3s ease-in-out infinite;
+    order: 2; /* 預設圖片在下方 */
+}
+
+.camp-poster:hover {
+    transform: scale(1.05);
+}
+
+.image-caption {
+    margin-top: 10px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    order: 1; /* 預設標題在上方 */
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.intro-section {
+    padding: 60px 40px;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.intro-content {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.highlight {
+    color: #0d47a1;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.camp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 30px;
+    padding: 40px;
+}
+
+.camp-card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.camp-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.camp-header {
+    padding: 25px;
+    color: white;
+    text-align: center;
+}
+
+.camp-content {
+    padding: 25px;
+    background: white;
+}
+
+.camp-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.camp-title {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.camp-description {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* 修改活動資訊樣式 - 確保大螢幕下橫列顯示 */
+.camp-details {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.camp-details p {
+    margin-bottom: 0;
+    display: flex;
+    align-items: flex-start;
+    min-height: 24px;
+}
+
+.camp-details i {
+    margin-right: 10px;
+    color: #0d47a1;
+    width: 20px;
+    flex-shrink: 0;
+}
+
+.camp-details strong {
+    min-width: 80px;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+/* 確保大螢幕下文字不會換行 */
+@media (min-width: 769px) {
+    .camp-details p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .camp-details strong {
+        min-width: 85px;
+    }
+}
+
+.camp-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #0d47a1;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background 0.3s;
+    margin-top: 15px;
+}
+
+.camp-button:hover {
+    background: #1565c0;
+}
+
+.benefits-section {
+    padding: 60px 40px;
+    background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.benefit-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-icon {
+    font-size: 2.5rem;
+    color: #0d47a1;
+    margin-bottom: 20px;
+}
+
+.benefit-title {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #0d47a1;
+}
+
+.testimonials-section {
+    padding: 60px 40px;
+    background-color: white;
+    text-align: center;
+}
+
+.testimonial {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 5px solid #0d47a1;
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    color: #0d47a1;
+}
+
+.cta-section {
+    padding: 60px 40px;
+    background: linear-gradient(135deg, #0d47a1 0%, #1976d2 100%);
+    color: white;
+    text-align: center;
+}
+
+.cta-title {
+    color: white;
+    margin-bottom: 20px;
+}
+
 /* 修復CTA區域樣式 */
 .cta-content {
     display: flex;
@@ -618,14 +618,14 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    width: 100%; /* 新增這行 */
+    width: 100%;
 }
 
 .button-row {
     display: flex;
-    justify-content: space-between; /* 大螢幕時保持分散對齊 */
+    justify-content: space-between;
     gap: 15px;
-    width: 100%; /* 新增這行 */
+    width: 100%;
 }
 
 .cta-button {
@@ -648,144 +648,204 @@
     background: #ffd600;
     transform: scale(1.05);
 }
-        
-        .nav-menu {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 30px;
-        }
-        
-        .nav-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-        
-        .nav-button:hover {
-            background: rgba(255, 255, 255, 0.3);
-        }
-        
-        footer {
-            text-align: center;
-            padding: 30px;
-            background-color: #0d47a1;
-            color: white;
-        }
-        
-        .camp-highschool {
-            background: linear-gradient(135deg, #0d47a1 0%, #1976d2 100%);
-        }
-        
-        .camp-junior {
-            background: linear-gradient(135deg, #003366 0%, #005EBD 100%);
-        }
-        
-        .camp-highschool-north {
-            background: linear-gradient(135deg, #1b5e20 0%, #388e3c 100%);
-        }
-        
-        .camp-junior-north {
-            background: linear-gradient(135deg, #8B8D00 0%, #BCBD00 100%);
-        }
 
-        .countdown {
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 10px;
-            padding: 15px;
-            margin: 20px auto;
-            max-width: 500px;
-        }
-        
-        .countdown-title {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-        
-        .countdown-timer {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #ffeb3b;
-        }
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
 
-        /* 大螢幕時標題在圖片下方 */
-        @media (min-width: 769px) {
-            .image-caption {
-                order: 2; /* 標題在圖片下方 */
-                margin-top: 10px;
-                margin-bottom: 0;
-                font-size: 1.1rem; /* 大螢幕標題字體 */
-            }
-            
-            .camp-poster {
-                order: 1; /* 圖片在標題上方 */
-            }
-        }
-        
-        /* 響應式調整 */
-        @media (max-width: 768px) {
-            .camp-grid {
-                grid-template-columns: 1fr;
-                padding: 20px;
-            }
-            
-            h1 {
-                font-size: 2.5rem; /* 加大主標題 */
-            }
-            
-            h2 {
-                font-size: 1.6rem; /* 加大副標題 */
-            }
-            
-            .intro-section, .benefits-section, .testimonials-section, .cta-section {
-                padding: 40px 20px;
-            }
-            
-            /* 雙圖佈局響應式 */
-            .dual-images {
-                gap: 20px;
-                padding: 0 15px;
-            }
-            
-            .camp-poster {
-                max-width: 200px;
-            }
-            
-            /* 小螢幕時標題在圖片上方，並加大字體 */
-            .image-caption {
-                order: 1; /* 標題在圖片上方 */
-                margin-top: 0;
-                margin-bottom: 15px;
-                font-size: 1.4rem; /* 加大標題字體 */
-                font-weight: bold;
-                line-height: 1.3;
-            }
-            
-            .camp-poster {
-                order: 2; /* 圖片在標題下方 */
-            }
-            
-            /* 小螢幕時允許文字換行 */
-            .camp-details p {
-                white-space: normal;
-            }
-            
-            /* CTA區域響應式調整 */
- @media (max-width: 768px) {
+.nav-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.nav-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #0d47a1;
+    color: white;
+}
+
+.camp-highschool {
+    background: linear-gradient(135deg, #0d47a1 0%, #1976d2 100%);
+}
+
+.camp-junior {
+    background: linear-gradient(135deg, #003366 0%, #005EBD 100%);
+}
+
+.camp-highschool-north {
+    background: linear-gradient(135deg, #1b5e20 0%, #388e3c 100%);
+}
+
+.camp-junior-north {
+    background: linear-gradient(135deg, #8B8D00 0%, #BCBD00 100%);
+}
+
+.countdown {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+.countdown-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.countdown-timer {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffeb3b;
+}
+
+/* 大螢幕時標題在圖片下方 */
+@media (min-width: 769px) {
+    .image-caption {
+        order: 2;
+        margin-top: 10px;
+        margin-bottom: 0;
+        font-size: 1.1rem;
+    }
+    
+    .camp-poster {
+        order: 1;
+    }
+}
+
+/* 新的QR Code區域樣式 - 所有螢幕都保持左右排列 */
+.contact-qr-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.qr-codes-section {
+    display: flex;
+    flex-direction: row; /* 所有螢幕都保持橫向排列 */
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* 調整間距 */
+    width: 100%;
+    flex-wrap: nowrap; /* 防止換行 */
+}
+
+.qr-code-item {
+    text-align: center;
+    flex: 0 0 auto; /* 不伸縮不縮小 */
+}
+
+.qr-code-image {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #ffeb3b, #ffc107);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.qr-code-image:hover {
+    transform: scale(1.05);
+}
+
+.qr-code-text {
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+    line-height: 1.3;
+}
+
+.qr-code-text .first-line {
+    font-size: 1rem;
+    margin-bottom: 2px;
+}
+
+.qr-code-text .second-line {
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+/* 響應式調整 */
+@media (max-width: 768px) {
+    .camp-grid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 1.6rem;
+    }
+    
+    .intro-section, .benefits-section, .testimonials-section, .cta-section {
+        padding: 40px 20px;
+    }
+    
+    .dual-images {
+        gap: 20px;
+        padding: 0 15px;
+    }
+    
+    .camp-poster {
+        max-width: 200px;
+    }
+    
+    .image-caption {
+        order: 1;
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-size: 1.4rem;
+        font-weight: bold;
+        line-height: 1.3;
+    }
+    
+    .camp-poster {
+        order: 2;
+    }
+    
+    .camp-details p {
+        white-space: normal;
+    }
+    
+    /* CTA區域響應式調整 */
     .cta-content {
         flex-direction: column;
         gap: 30px;
-        align-items: center; /* 新增：讓內容置中 */
+        align-items: center;
     }
     
     .cta-buttons-section {
-        align-items: center; /* 新增：讓按鈕區域置中 */
+        align-items: center;
         width: 100%;
     }
     
@@ -793,8 +853,8 @@
         flex-direction: column;
         gap: 12px;
         width: 100%;
-        max-width: 280px; /* 限制最大寬度，讓按鈕不會太寬 */
-        justify-content: center; /* 改為置中對齊 */
+        max-width: 280px;
+        justify-content: center;
     }
     
     .cta-button {
@@ -804,199 +864,173 @@
         padding: 10px 18px;
         font-size: 0.95rem;
     }
+    
+    /* QR Code在小螢幕下調整間距 */
+    .qr-codes-section {
+        gap: 30px;
+    }
+    
+    .qr-code-image {
+        width: 90px;
+        height: 90px;
+    }
 }
-        
-        @media (max-width: 600px) {
-            .dual-images {
-                gap: 15px;
-                padding: 0 10px;
-            }
-            
-            .camp-poster {
-                max-width: 45vw;
-            }
-            
-            /* 中等手機進一步加大標題 */
-            .image-caption {
-                font-size: 1.5rem;
-            }
-            
-            h1 {
-                font-size: 2.3rem;
-            }
-            
-            h2 {
-                font-size: 1.5rem;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .container {
-                border-radius: 0;
-            }
-            
-            .dual-images {
-                flex-direction: column;
-                gap: 25px;
-                padding: 0 15px;
-            }
-            
-            .camp-poster {
-                max-width: 70vw;
-            }
-            
-            .image-container {
-                max-width: none;
-            }
-            
-            /* 手機上保持標題在圖片上方，並進一步加大字體 */
-            .image-caption {
-                order: 1;
-                margin-top: 0;
-                margin-bottom: 15px;
-                font-size: 1.6rem; /* 手機上最大字體 */
-                font-weight: bold;
-                line-height: 1.2;
-            }
-            
-            .camp-poster {
-                order: 2;
-            }
-            
-            header {
-                padding: 30px 10px;
-            }
-            
-            h1 {
-                font-size: 2.2rem;
-                padding: 0 10px;
-            }
-            
-            h2 {
-                font-size: 1.4rem;
-                padding: 0 10px;
-            }
-            
-            .subtitle {
-                font-size: 1.1rem;
-                padding: 0 10px;
-            }
-            
-            .content {
-                padding: 15px;
-            }
-            
-            /* CTA區域手機端調整 */
-            .cta-button {
-                padding: 10px 10px;
-                font-size: 0.9rem;
-                max-width: 220px;
-            }
-        }
 
-        /* 超小手機特別處理 */
-        @media (max-width: 360px) {
-            .image-caption {
-                font-size: 1.4rem; /* 超小手機適度調整 */
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-            
-            h2 {
-                font-size: 1.3rem;
-            }
-        }
-        
-        /* 新的QR Code區域樣式 - 放在email之後 */
-        .contact-qr-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            margin-top: 30px;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+@media (max-width: 600px) {
+    .dual-images {
+        gap: 15px;
+        padding: 0 10px;
+    }
+    
+    .camp-poster {
+        max-width: 45vw;
+    }
+    
+    .image-caption {
+        font-size: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 2.3rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    /* QR Code在更小螢幕下進一步調整 */
+    .qr-codes-section {
+        gap: 25px;
+    }
+    
+    .qr-code-image {
+        width: 85px;
+        height: 85px;
+    }
+}
 
-        .qr-codes-section {
-            display: flex;
-            gap: 30px;
-            justify-content: center;
-        }
+@media (max-width: 480px) {
+    .container {
+        border-radius: 0;
+    }
+    
+    .dual-images {
+        flex-direction: column;
+        gap: 25px;
+        padding: 0 15px;
+    }
+    
+    .camp-poster {
+        max-width: 70vw;
+    }
+    
+    .image-container {
+        max-width: none;
+    }
+    
+    .image-caption {
+        order: 1;
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-size: 1.6rem;
+        font-weight: bold;
+        line-height: 1.2;
+    }
+    
+    .camp-poster {
+        order: 2;
+    }
+    
+    header {
+        padding: 30px 10px;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+        padding: 0 10px;
+    }
+    
+    h2 {
+        font-size: 1.4rem;
+        padding: 0 10px;
+    }
+    
+    .subtitle {
+        font-size: 1.1rem;
+        padding: 0 10px;
+    }
+    
+    .content {
+        padding: 15px;
+    }
+    
+    .cta-button {
+        padding: 10px 10px;
+        font-size: 0.9rem;
+        max-width: 220px;
+    }
+    
+    /* QR Code在超小螢幕下保持左右排列但調整尺寸 */
+    .qr-codes-section {
+        gap: 20px;
+    }
+    
+    .qr-code-image {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .qr-code-text {
+        font-size: 0.8rem;
+    }
+    
+    .qr-code-text .first-line {
+        font-size: 0.9rem;
+    }
+    
+    .qr-code-text .second-line {
+        font-size: 0.75rem;
+    }
+}
 
-        .qr-code-item {
-            text-align: center;
-        }
+/* 超小手機特別處理 */
+@media (max-width: 360px) {
+    .image-caption {
+        font-size: 1.4rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    /* 在極小螢幕下QR Code仍然保持左右排列 */
+    .qr-codes-section {
+        gap: 15px;
+    }
+    
+    .qr-code-image {
+        width: 75px;
+        height: 75px;
+    }
+    
+    .qr-code-text {
+        font-size: 0.75rem;
+    }
+    
+    .qr-code-text .first-line {
+        font-size: 0.85rem;
+    }
+    
+    .qr-code-text .second-line {
+        font-size: 0.7rem;
+    }
+}
+</style>
 
-        .qr-code-image {
-            width: 100px;
-            height: 100px;
-            background: linear-gradient(135deg, #ffeb3b, #ffc107);
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .qr-code-image:hover {
-            transform: scale(1.05);
-        }
-
-        .qr-code-text {
-            color: white;
-            font-weight: bold;
-            font-size: 0.9rem;
-            line-height: 1.3;
-        }
-
-        .qr-code-text .first-line {
-            font-size: 1rem;
-            margin-bottom: 2px;
-        }
-
-        .qr-code-text .second-line {
-            font-size: 0.8rem;
-            opacity: 0.9;
-        }
-
-        /* QR Code響應式調整 */
-        @media (max-width: 768px) {
-            .qr-codes-section {
-                gap: 25px;
-            }
-            
-            .qr-code-image {
-                width: 90px;
-                height: 90px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .qr-codes-section {
-                gap: 20px;
-            }
-            
-            .qr-code-image {
-                width: 80px;
-                height: 80px;
-            }
-            
-            .qr-code-text {
-                font-size: 0.8rem;
-            }
-        }
-    </style>
-
-    </style>
 
 </head>
 <body>
@@ -1214,7 +1248,7 @@
                         <div class="qr-code-image">
                             <!-- 替換為您的FB QR Code圖片 -->
                             <a target="_blank" href="https://www.facebook.com/profile.php?id=61582066340414">
-                                <img src="images/fb-qr-code.png" alt="AI機器人營隊FB" style="width: 80px; height: 80px; border-radius: 10px;">
+                                <img src="https://ai.yc123.com.tw/images/fb-qr-code.png" alt="AI機器人營隊FB" style="width: 80px; height: 80px; border-radius: 10px;">
                             </a>
                         </div>
                         <div class="qr-code-text">
@@ -1226,7 +1260,7 @@
                         <div class="qr-code-image">          
                             <!-- 替換為您的Line QR Code圖片 -->
                             <a target="_blank" href="https://lin.ee/c2u7Brz">                      
-                                <img src="images/line-qr-code.png" alt="AI機器人營隊Line" style="width: 80px; height: 80px; border-radius: 10px;">
+                                <img src="https://ai.yc123.com.tw/images/line-qr-code.png" alt="AI機器人營隊Line" style="width: 80px; height: 80px; border-radius: 10px;">
                             </a>
                         </div>
                         <div class="qr-code-text">
