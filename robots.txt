@@ -5,9 +5,9 @@ Allow: /camp2.html
 Allow: /camp3.html
 Allow: /camp4.html
 Disallow: /images/
-Disallow: /*.pdf$
 
 Sitemap: https://ai.yc123.com.tw/sitemap.xml
+
 
 
 
