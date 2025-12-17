@@ -1,13 +1,7 @@
-User-agent: *
-Allow: /$
-Allow: /camp1.html
-Allow: /camp2.html
-Allow: /camp3.html
-Allow: /camp4.html
-Disallow: /images/
+﻿User-agent: *
+Allow: /
 
-Sitemap: https://ai.yc123.com.tw/sitemap.xml
-
+Sitemap: https://av.yc123.com.tw/sitemap.xml
 
 
 

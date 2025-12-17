@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI機器人工程師冬令營 | 高中職專屬 | 中彰投雲嘉南地區 | 程式設計證書</title>
-    <meta name="description" content="專為高中職學生設計的AI機器人工程師課程！4天完整學習Python程式設計、機器人控制、感測器應用，獲得專業研習證書。培養AI時代必備技能，為大學科系選擇做好準備！">
-    <meta name="copyright" content="2025 AI機器人探索營隊">
-    <meta name="generator" content="博才網站SEO">
+<title>AI機器人工程師冬令營 | 高中職專屬 | 中彰投雲嘉南地區 | 程式設計證書</title>
+<meta name="description" content="專為高中職學生設計的AI機器人工程師課程！4天完整學習Python程式設計、機器人控制、感測器應用，獲得專業研習證書。培養AI時代必備技能，為大學科系選擇做好準備！">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="copyright" content="2025 AI機器人探索營隊">
+<meta name="generator" content="博才網站SEO">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -132,16 +134,11 @@
             margin: 30px 0;
         }
         
-        /* 修改報名方案佈局 */
-        .plans-grid {
+        .plans-container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
             margin-top: 20px;
-        }
-        
-        .plan-row {
-            display: contents;
         }
         
         .plan {
@@ -176,7 +173,6 @@
         .plan-details {
             margin: 10px 0;
             color: #555;
-            line-height: 1.5;
         }
         
         .plan-deadline {
@@ -224,31 +220,18 @@
             border-radius: 10px;
         }
         
-        .qr-responsive-container {
-            width: min(200px, 40vw);
-            height: min(200px, 40vw);
+        .qr-placeholder {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(45deg, #0d47a1, #1976d2);
             margin: 0 auto 15px;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            background: white;
-            padding: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-        }
-        
-        .qr-responsive {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-        
-        .qr-note {
-            font-size: 0.9rem;
-            color: #666;
-            margin-top: 10px;
-            font-style: italic;
+            border-radius: 10px;
+            color: white;
+            font-size: 1.2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
         footer {
@@ -262,6 +245,45 @@
         .highlight {
             color: #e53935;
             font-weight: bold;
+        }
+        
+        /* 響應式設計 */
+        @media (max-width: 768px) {
+            .hero-section {
+                flex-direction: column;
+            }
+            
+            .hero-image-container {
+                margin-right: 0;
+                margin-bottom: 20px;
+                width: 100%;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+            
+            .plans-container, .info-section {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                border-radius: 10px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .content {
+                padding: 15px;
+            }
         }
         
         /* 導航選單樣式 */
@@ -294,66 +316,66 @@
         .nav-button:hover {
             transform: translateY(-2px);
         }
-        
-        /* 響應式設計 */
-        @media (max-width: 768px) {
-            .hero-section {
-                flex-direction: column;
-            }
-            
-            .hero-image-container {
-                margin-right: 0;
-                margin-bottom: 20px;
-                width: 100%;
-            }
-            
-            h1 {
-                font-size: 2.2rem;
-            }
-            
-            h2 {
-                font-size: 1.6rem;
-            }
-            
-            /* 手機版改為單列顯示 */
-            .plans-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .info-section {
-                grid-template-columns: 1fr;
-            }
-            
-            .qr-responsive-container {
-                width: 180px;
-                height: 180px;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .container {
-                border-radius: 10px;
-            }
-            
-            h1 {
-                font-size: 1.8rem;
-            }
-            
-            .content {
-                padding: 15px;
-            }
-            
-            .qr-responsive-container {
-                width: 160px;
-                height: 160px;
-            }
-            
-            .qr-section {
-                padding: 15px;
-                margin: 20px 0;
-            }
-        }
-    </style>
+
+/* QR Code 區域樣式 */
+.qr-section {
+    text-align: center;
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #f0f7ff;
+    border-radius: 10px;
+}
+
+.qr-responsive-container {
+    width: min(200px, 40vw);
+    height: min(200px, 40vw);
+    margin: 0 auto 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qr-responsive {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.qr-note {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* 響應式調整 */
+@media (max-width: 768px) {
+    .qr-responsive-container {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .qr-responsive-container {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .qr-section {
+        padding: 15px;
+        margin: 20px 0;
+    }
+}
+
+</style>
+
+
 </head>
 <body>
     <div class="container">
@@ -361,8 +383,8 @@
             <h1>2025 智造未來：</h1>
             <h2>AI機器人工程師冬令營</h2>
             
-            <h3 style="color: white;">2025 Invent the Future:</h3>
-            <h4 style="color: white;">AI Robotics Engineer Camp</h4>
+            <h3>2025 Invent the Future:</h3>
+            <h4>AI Robotics Engineer Camp</h4>
             
             <div class="region-tag">中彰投・雲嘉南地區限定</div>
         </header>
@@ -383,9 +405,8 @@
                     <h3>採線上報名：</h3>
                     <p><strong>QR code - <span style="color:#800080">手機直連</span></strong></p>
                     <div class="qr-responsive-container">
-                        <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeuVIZykYTfub2BSV52AJ-30-8DWMJgzRuwWXWCLEmJcL6OlQ/viewform">
-                            <img src="images/camp1_qrcode.png" alt="線上報名QR Code" class="qr-responsive">
-                        </a>
+                  <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeuVIZykYTfub2BSV52AJ-30-8DWMJgzRuwWXWCLEmJcL6OlQ/viewform">
+                  <img src="images/camp1_qrcode.png" alt="線上報名QR Code" class="qr-responsive"></a>
                     </div>
                     <p class="qr-note">使用手機相機掃描QR Code即可報名</p>
                 </section>
@@ -396,36 +417,29 @@
             <section class="pricing-plans">
                 <h3>報名方案 (費用均含午餐與教材)</h3>
                 
-                <!-- 修改後的報名方案佈局 -->
-                <div class="plans-grid">
-                    <!-- 第一列：A、B方案 -->
-                    <div class="plan-row">
-                        <div class="plan">
-                            <div class="plan-title">A｜早鳥雙課程方案｜<span class="highlight">$5,000/人</span></div>
-                            <div class="plan-details">課程：AI程式設計入門、機器人動作設計 (可獲得兩張研習證書)</div>
-                            <div class="plan-deadline">報名期限：即日起～114/12/15</div>
-                        </div>
-                        
-                        <div class="plan">
-                            <div class="plan-title">B｜早鳥全課程方案｜<span class="highlight">$9,000/人</span></div>
-                            <div class="plan-details">課程：AI程式設計入門、機器人動作設計、3D建模設計、3D列印實戰四門課程全選 (可獲得四張研習證書)</div>
-                            <div class="plan-deadline">報名期限：即日起～114/12/15</div>
-                        </div>
+                <div class="plans-container">
+                    <div class="plan">
+                        <div class="plan-title">A｜早鳥雙課程方案｜<span class="highlight">$5,000/人</span></div>
+                        <div class="plan-details">課程：AI程式設計入門、機器人動作設計 (可獲得兩張研習證書)</div>
+                        <div class="plan-deadline">報名期限：即日起～114/12/15</div>
                     </div>
                     
-                    <!-- 第二列：C、D方案 -->
-                    <div class="plan-row">
-                        <div class="plan">
-                            <div class="plan-title">C｜一般雙課程方案｜<span class="highlight">$7,000/人</span></div>
-                            <div class="plan-details">課程：AI程式設計入門、機器人動作設計 (可獲得兩張研習證書)</div>
-                            <div class="plan-deadline">報名期限：114/12/16～115/1/15</div>
-                        </div>
-                        
-                        <div class="plan">
-                            <div class="plan-title">D｜一般全課程方案｜<span class="highlight">$13,000/人</span></div>
-                            <div class="plan-details">課程：AI程式設計入門、機器人動作設計、3D建模設計、3D列印實戰四門課程全選 (可獲得四張研習證書)</div>
-                            <div class="plan-deadline">報名期限：114/12/16～115/1/15</div>
-                        </div>
+                    <div class="plan">
+                        <div class="plan-title">B｜早鳥全課程方案｜<span class="highlight">$9,000/人</span></div>
+                        <div class="plan-details">課程：四門課程全選 (可獲得四張研習證書)</div>
+                        <div class="plan-deadline">報名期限：即日起～114/12/15</div>
+                    </div>
+                    
+                    <div class="plan">
+                        <div class="plan-title">C｜一般雙課程方案｜<span class="highlight">$7,000/人</span></div>
+                        <div class="plan-details">課程：AI程式設計入門、機器人動作設計 (可獲得兩張研習證書)</div>
+                        <div class="plan-deadline">報名期限：114/12/16～115/1/15</div>
+                    </div>
+                    
+                    <div class="plan">
+                        <div class="plan-title">D｜一般全課程方案｜<span class="highlight">$13,000/人</span></div>
+                        <div class="plan-details">課程：四門課程全選 (可獲得四張研習證書)</div>
+                        <div class="plan-deadline">報名期限：114/12/16～115/1/15</div>
                     </div>
                 </div>
             </section>
@@ -433,7 +447,7 @@
             <section class="info-section">
                 <div class="info-card">
                     <h3><i class="fas fa-calendar-alt"></i> 活動日期</h3>
-                    <p>115年1月27日(二)～115年1月30日(五)</p>
+                    <p>115年1月27日(二)～115年1月30日(四)</p>
                 </div>
                 
                 <div class="info-card">
@@ -478,5 +492,6 @@
             <a href="camp4.html" class="nav-button" style="background: #BCBD00;">北部國中小</a>
         </div>
     </div>
+
 </body>
 </html>
